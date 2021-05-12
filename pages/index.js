@@ -1,11 +1,21 @@
-import Container from 'react-bootstrap/Container'; 
+import { Row, Col, Button } from 'react-bootstrap';
+import Link from 'next/link';
+import { FaCrosshairs } from 'react-icons/fa';
 
 export default function Home() {
   return (
-    <>
-      <Container> 
-        Home Page Content 
-      </Container> 
-    </>
+    <Row className="mt-8 justify-content-center">
+      <Col md={7} xs={12} className="text-center">
+        <h1 className='fw-bolder text-custom-gray-darker mb-5 lh-base display-5'>
+          Comida saudável e gostosa direto na sua casa
+        </h1>
+        <Link href='/restaurants'>
+          <Button variant='custom-red' size='lg' className='text-white'>
+            <FaCrosshairs/>
+            <span className='px-2 fw-bolder'>ENCONTRAR AGORA</span>
+          </Button>
+        </Link>
+      </Col>
+    </Row>
   )
 }

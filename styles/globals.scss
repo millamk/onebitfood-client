@@ -1,5 +1,4 @@
 @import "colors.scss";
-@import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
 
 $theme-colors: (
@@ -25,6 +24,8 @@ $spacers: (
 );
 
 $font-weight-bold: 600;
+
+@import "~bootstrap/scss/bootstrap";
 
 html, body {
   margin: 0px;
