@@ -3,11 +3,12 @@ import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import Image from 'next/image';
 import Link from 'next/link';
+import SearchBox from '../SearchBox';
 
 const Header = () => {
   return (
     <Navbar bg="white" expand="lg" className="border-bottom border-custom-gray">
-      <Navbar.Brand>
+      <Navbar.Brand className="mx-3">
         <Link href="/restaurants">
           <a>
             <Image
@@ -16,11 +17,15 @@ const Header = () => {
               width={200}
               height={44}
               className="clickable_effect"
-              />
+            />
           </a>
-      </Link>
-    </Navbar.Brand>
-  </Navbar>
+        </Link>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+        <SearchBox />
+      </Navbar.Collapse>
+    </Navbar>
   )
 }
 
